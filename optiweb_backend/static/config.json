@@ -1,0 +1,5 @@
+{
+    "backend_api": "http://203.143.13.21:8000/api/auth/metrics/",
+    "web_server_ip": "203.143.13.21",
+    "token": "8669ce70025887cef7a7b2dc82492578dba23fda"
+}

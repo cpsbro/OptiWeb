@@ -1,0 +1,199 @@
+:root {
+  --ml-light-bg: #ffffff;
+  --ml-light-text: #333;
+  --ml-light-muted: #f1f1f1;
+
+  --ml-dark-bg: #2b2f40;
+  --ml-dark-text: #f0f0f0;
+  --ml-dark-muted: #3c3f50;
+
+  --ml-primary: #1976d2;
+  --ml-primary-hover: #1259a7;
+
+  --ml-risk-low: #4caf50;
+  --ml-risk-high: #f44336;
+}
+
+/* Main container */
+.ml-widget-container {
+  padding: 20px;
+  border-radius: 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.light-mode .ml-widget-container {
+  background: var(--ml-light-bg);
+  color: var(--ml-light-text);
+}
+
+.dark-mode .ml-widget-container {
+  background: var(--ml-dark-bg);
+  color: var(--ml-dark-text);
+}
+
+.ml-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ml-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.ml-header button {
+  background-color: var(--ml-primary);
+  color: white;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ml-header button:hover {
+  background-color: var(--ml-primary-hover);
+}
+
+.ml-card {
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.ml-card.low {
+  border-left: 6px solid var(--ml-risk-low);
+}
+
+.ml-card.high {
+  border-left: 6px solid var(--ml-risk-high);
+}
+
+.ml-risk {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.risk-low {
+  color: var(--ml-risk-low);
+  font-weight: bold;
+}
+
+.risk-high {
+  color: var(--ml-risk-high);
+  font-weight: bold;
+}
+
+.ml-status {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.ml-status.loading {
+  color: orange;
+}
+
+.ml-status.error {
+  color: red;
+}
+
+/* View Reasons Button */
+.ml-reasons-btn {
+  background-color: var(--ml-primary);
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.ml-reasons-btn:hover {
+  background-color: var(--ml-primary-hover);
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.light-mode .modal {
+  background-color: var(--ml-light-bg);
+  color: var(--ml-light-text);
+}
+
+.dark-mode .modal {
+  background-color: var(--ml-dark-bg);
+  color: var(--ml-dark-text);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.modal-body {
+  padding: 10px;
+  border-radius: 6px;
+  max-height: 60vh;
+  overflow-y: scroll;
+  font-size: 0.9rem;
+}
+
+.light-mode .modal-body {
+  background-color: var(--ml-light-muted);
+}
+
+.dark-mode .modal-body {
+  background-color: var(--ml-dark-muted);
+}
+
+.modal-body ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.modal-body li {
+  padding: 4px 0;
+  border-bottom: 1px dotted #aaa;
+}

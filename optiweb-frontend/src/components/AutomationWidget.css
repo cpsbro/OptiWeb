@@ -1,0 +1,132 @@
+:root {
+  --light-bg: linear-gradient(145deg, #ffffff, #f0f0f0);
+  --dark-bg: #273443;
+
+  --log-light: #f3f3f3;
+  --log-dark: #2f3e4e;
+
+  --text-dark: #e2e8f0;
+  --text-light: #333;
+  --highlight: #4caf50;
+  --warning: #ffa726;
+  --hover-green: #388e3c;
+  --log-label: #555;
+}
+
+/* Main Container */
+.automation-widget {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--light-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  min-height: 300px;
+  color: var(--text-light);
+}
+
+.dark-mode .automation-widget {
+  background: var(--dark-bg);
+  color: var(--text-dark);
+}
+
+.automation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.automation-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.auto-fix-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: var(--highlight);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auto-fix-btn:hover {
+  background-color: var(--hover-green);
+}
+
+.auto-fix-btn.fixing {
+  background-color: var(--warning);
+  cursor: not-allowed;
+}
+
+/* Status message */
+.status-message {
+  margin: 8px 0;
+  font-weight: 500;
+  color: var(--highlight);
+}
+
+.dark-mode .status-message {
+  color: #90cdf4;
+}
+
+.automation-logs {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.automation-logs ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.automation-logs li {
+  margin-bottom: 10px;
+  background-color: var(--log-light);
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s;
+}
+
+.dark-mode .automation-logs li {
+  background-color: var(--log-dark);
+}
+
+.log-time {
+  font-size: 0.85rem;
+  color: var(--log-label);
+  margin-bottom: 4px;
+}
+
+.dark-mode .log-time {
+  color: #a0aec0;
+}
+
+.log-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.dark-mode .log-text {
+  color: var(--text-dark);
+}
+
+/* Generic status */
+.status {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #888;
+}
+
+.status.loading {
+  color: #ffa726;
+}

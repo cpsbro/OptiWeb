@@ -1,0 +1,242 @@
+/* Base container */
+.admin-dashboard {
+  padding: 20px 20px 20px 80px;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  background: linear-gradient(270deg, #fdfbfb, #ebedee, #e0f7fa);
+  background-size: 600% 600%;
+  animation: subtle-shift 30s ease infinite;
+  position: relative;
+}
+
+/* Light & dark toggle */
+.light-mode {
+  background: linear-gradient(to right, #f9f9f9, #e0f7fa);
+  color: #1f1f1f;
+}
+
+.dark-mode {
+  background: linear-gradient(to right, #1e293b, #0f172a);
+  color: #e2e8f0;
+}
+
+.dark-mode .dashboard-title {
+  color: #90cdf4;
+}
+
+/* Sidebar navigation */
+.sidebar-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  background: #20232a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-icons a {
+  color: #ccc;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  transition: 0.3s;
+}
+
+.nav-icons a:hover {
+  color: #61dafb;
+  transform: scale(1.2);
+}
+
+.theme-selector {
+  margin-top: auto;
+  padding-bottom: 1rem;
+}
+
+.theme-selector select {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.dashboard-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.button-group button {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.button-group button:hover {
+  transform: translateY(-1px);
+}
+
+/* ? Updated: Dark Mode toggle button color set to black */
+.button-group button:nth-child(1) {
+  background-color: black;
+  color: #fff;
+}
+
+.button-group button:nth-child(1):hover {
+  background-color: #333;
+}
+
+.logout-btn {
+  background-color: green;
+  color: #fff;
+}
+
+.logout-btn:hover {
+  background-color: #c62828;
+}
+
+/* Mini status bar */
+.mini-stats {
+  background-color: rgba(25, 118, 210, 0.1);
+  color: #1976d2;
+  padding: 10px 14px;
+  font-weight: 500;
+  border-left: 5px solid #1976d2;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* Widget layout rows */
+.top-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.center-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.center-row > * {
+  transition: transform 0.3s ease;
+}
+
+.center-row > *:hover {
+  transform: scale(1.02);
+}
+
+/* Widget cards */
+.widgets-grid > * {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.widgets-grid > *:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .widgets-grid > * {
+  background: rgba(39, 52, 67, 0.95);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* GLASS THEME */
+.admin-dashboard.glass .widgets-grid > * {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* CYBERPUNK THEME */
+.admin-dashboard.cyberpunk .widgets-grid > * {
+  background: #0f0f0f;
+  color: #00ffea;
+  border: 1px solid #00ffea;
+  box-shadow: 0 0 15px #00ffea;
+}
+
+.admin-dashboard.cyberpunk .dashboard-title {
+  color: #ff00ff;
+}
+
+/* Fade in animation */
+.fade-in {
+  animation: fadeInUp 0.8s ease both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Background animation */
+@keyframes subtle-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 768px) {
+  .sidebar-nav {
+    display: none;
+  }
+
+  .admin-dashboard {
+    padding: 20px;
+  }
+
+  .dashboard-title {
+    font-size: 1.6rem;
+  }
+
+  .mini-stats {
+    font-size: 0.85rem;
+  }
+}

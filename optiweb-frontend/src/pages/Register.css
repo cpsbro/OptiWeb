@@ -1,0 +1,136 @@
+/* Center the registration form */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #42a5f5, #478ed1);
+}
+
+/* Card-style registration form */
+.register-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Registration form fields */
+.register-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+.register-form input:focus {
+  border-color: #42a5f5;
+  outline: none;
+  box-shadow: 0 0 5px rgba(66, 165, 245, 0.5);
+}
+
+/* Button styling */
+.register-form button {
+  width: 100%;
+  padding: 10px;
+  background: #42a5f5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-form button:hover {
+  background: #3585d4;
+}
+
+/* Popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup styling */
+.popup {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+/* API token styling */
+.token {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2d7cde;
+  word-break: break-all;
+  margin: 10px 0;
+}
+
+/* Buttons inside popup */
+.popup button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup button:hover {
+  background: #2d7cde;
+  color: #fff;
+}
+
+/* Close button */
+.close-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.close-btn:hover {
+  background: #c0392b;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 1.5rem;
+  }
+
+  .register-form input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .register-form button {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .popup {
+    padding: 1.5rem;
+  }
+}

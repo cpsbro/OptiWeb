@@ -1,0 +1,200 @@
+:root {
+  --bg-color-light: #f8f9fa;
+  --text-color-light: #333;
+  --card-bg-light: white;
+  --uptime-bg-light: #eee;
+
+  --bg-color-dark: #1e1e2f;
+  --text-color-dark: #f0f0f0;
+  --card-bg-dark: #2c2c3e;
+  --uptime-bg-dark: #333;
+
+  --primary: #1976d2;
+  --green: #4caf50;
+  --orange: #ffa726;
+  --red: #f44336;
+}
+
+/* Main Container */
+.monitoring-widget {
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.light-mode .monitoring-widget {
+  background: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+.dark-mode .monitoring-widget {
+  background: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+}
+
+.header button {
+  background-color: var(--green);
+  color: white;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.metrics-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.metric-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  width: 100%;
+  max-width: 500px;
+  transition: background 0.3s;
+}
+
+.light-mode .metric-card {
+  background: var(--card-bg-light);
+}
+
+.dark-mode .metric-card {
+  background: var(--card-bg-dark);
+}
+
+.circles-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.circle-box {
+  text-align: center;
+}
+
+.progress-circle {
+  width: 80px;
+  height: 80px;
+  transform: rotate(-90deg);
+}
+
+.bg {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 8;
+}
+
+.fg {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.fg.green {
+  stroke: var(--green);
+}
+
+.fg.orange {
+  stroke: var(--orange);
+}
+
+.fg.red {
+  stroke: var(--red);
+}
+
+.circle-text {
+  fill: currentColor;
+  font-size: 14px;
+  dominant-baseline: middle;
+}
+
+.circle-label {
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* Uptime Bar */
+.uptime-graph {
+  margin-top: 15px;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.light-mode .uptime-graph {
+  background-color: var(--uptime-bg-light);
+}
+
+.dark-mode .uptime-graph {
+  background-color: var(--uptime-bg-dark);
+}
+
+.uptime-bar {
+  height: 100%;
+  background-color: var(--green);
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.85rem;
+  padding-top: 2px;
+  transition: width 1s ease;
+}
+
+/* Timestamp Display */
+.timestamp-box {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.timestamp-label {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.timestamp-value {
+  color: inherit;
+}
+
+/* Status */
+.status {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.status.loading {
+  color: orange;
+}
+
+.status.error {
+  color: red;
+}
+
+/* Contrast Fixes for Dark Mode */
+.dark-mode .heading-title,
+.dark-mode .server-label,
+.dark-mode .timestamp-label {
+  color: #ffffff;
+}
+
+.dark-mode .timestamp-value {
+  color: #cccccc;
+}

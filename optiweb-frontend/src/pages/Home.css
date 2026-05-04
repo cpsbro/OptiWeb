@@ -1,0 +1,116 @@
+:root {
+  --green-main: #4caf50;
+  --green-dark: #388e3c;
+  --text-light: #333;
+  --text-dark: #f0f0f0;
+  --bg-light: #f8f9fa;
+  --bg-dark: #1e1e2f;
+}
+
+/* Main container for theme toggle */
+.home-container {
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light mode */
+.light-mode .home-container {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+/* Dark mode */
+.dark-mode .home-container {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.welcome-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.welcome-subtitle {
+  margin-bottom: 40px;
+}
+
+/* Green Unified Buttons */
+.green-btn {
+  background-color: var(--green-main) !important;
+  color: white !important;
+  text-decoration: none !important;
+  padding: 8px 20px;
+}
+
+.green-btn:hover {
+  background-color: var(--green-dark) !important;
+}
+
+/* Features Section */
+.features-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.features-title {
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.feature-card {
+  transition: 0.3s ease-in-out;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .feature-card {
+  background: rgba(44, 44, 62, 0.95);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.feature-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  color: #666;
+}
+
+.dark-mode .feature-description {
+  color: #ccc;
+}
+
+/* Why Choose Section */
+.why-choose-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.why-choose-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.why-choose-subtitle {
+  margin-bottom: 40px;
+}

@@ -1,0 +1,90 @@
+.agent-container {
+  background: linear-gradient(to bottom right, #e0f7ff, #e6e6ff);
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.agent-box {
+  max-width: 960px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.agent-title {
+  font-size: 1.8rem;
+  color: #0f9d58;
+  font-weight: 700;
+}
+
+.agent-description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.agent-step {
+  margin-bottom: 2rem;
+}
+
+.agent-step h3 {
+  color: #3366cc;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.agent-step p {
+  margin: 0.3rem 0;
+  color: #333;
+}
+
+.agent-step pre {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  margin-top: 0.5rem;
+  color: #000;
+}
+
+.agent-step ul {
+  margin-left: 1.5rem;
+  color: #111;
+}
+
+.agent-step code {
+  background: #f0f0f0;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.agent-help {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+
+.agent-help h3 {
+  color: #d93025;
+}
+
+.agent-help a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.agent-help a:hover {
+  text-decoration: underline;
+}
+
+.highlight {
+  background: #e6ffe6;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: inline-block;
+}
